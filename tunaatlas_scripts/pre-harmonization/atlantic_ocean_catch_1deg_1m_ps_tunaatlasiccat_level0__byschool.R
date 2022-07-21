@@ -38,7 +38,7 @@
 # Belize   PS 2009-09-01 2009-10-01  5202006     LS     SKJ         C         MT 15.76
 # Belize   PS 2009-09-01 2009-10-01  5202006     LS     YFT         C         MT  2.65
 # Belize   PS 2009-09-01 2009-10-01  5202008     LS     BET         C         MT  3.60
-
+function(action, entity, config){
 #packages
 if(!require(rtunaatlas)){
   if(!require(devtools)){
@@ -129,4 +129,4 @@ file.rename(from = entity$getJobDataResource(config, filename2), to = output_nam
 entity$addResource("source", path_to_raw_dataset)
 entity$addResource("harmonized", output_name_dataset)
 entity$addResource("codelists", output_name_codelists)
-
+}
